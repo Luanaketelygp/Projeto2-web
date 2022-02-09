@@ -4,8 +4,8 @@ const requireDir = require('requireDir')
 const cors = require('cors')
 const application = express()
 
-mongoose.connect('', {}).then(() => {
-    console.log("Conexão realizada com sucesso!")
+mongoose.connect('mongodb://localhost:3306/cadastro', {userNewUrlParser :true, useUnifiedTopology: true}).then(() => {
+    console.log("Conexão realizada!")
 }).catch((erro) => {
     console.log("Erro na conexão!")
 })
